@@ -1,5 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import logo from './logo191-white.png';
 import './App.css';
+
 import react,{useState,useEffect} from 'react';
 // importing router from reactrouter.com for loading componenets
 import {Switch,Route,Link,Redirect} from 'react-router-dom';
@@ -8,6 +10,7 @@ import {connect} from 'react-redux';
 // components
 import Home from './web-components/Home.js';
 import Shoes from './web-components/Shoes.js';
+
 
 function App() {
   // search input
@@ -37,7 +40,9 @@ function App() {
     <div className="">
       <div className="topnav" id="myTopNav">
       <header className="">
-        <Link to="/" className="item active"><div >Logo</div></Link>
+        <Link to="/" className="item active">
+          <img className="App-logo-l" src={logo} />
+        </Link>
         <input id="searchBar" placeholder="Buscar" className="searchBar" onChange = {e => setSearch(e.target.value)}></input>
         <button id="inputB" className="search-buttom"><i class="fa fa-search"></i></button>
 

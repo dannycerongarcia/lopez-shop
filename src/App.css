@@ -3,7 +3,13 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 8vmin;
+  pointer-events: none;
+}
+.App-logo-l {
+  height: 3.5vmax;
+  width: 4.5vmax;
+ 
   pointer-events: none;
 }
 
@@ -42,7 +48,7 @@
   margin-bottom: 1px;
   padding: 12px 13px;
   overflow: hidden;
-  width: 85%;
+  width: 80%;
   border-radius: 8px 0px 0px 8px;
   border-width:0px;
 }
@@ -78,6 +84,8 @@
 }
 .topnav .active{
   padding-left: 13px;
+  padding-top: 1px;
+  padding-bottom:1px;
   float:left;
   color: white;
 }
@@ -96,15 +104,15 @@
   .topnav .item:not(:first-child){display: none;
     background-color:white;
     color:#282c34;
-}
-.topnav .item:hover{
+  }
+  .topnav .item:hover{
   background-color: #333;
   color: white;
-}
-.topnav .item.active:hover{
+  }
+  .topnav .item.active:hover{
   background-color: #333;
   color: white;
-}
+  }
   .topnav .item.icon{
     background-color: #333;
     color: white;
@@ -113,10 +121,16 @@
   }
   .topnav .active{
     
-    padding: 14px;
+    padding: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .searchBar{
     width: 70%;
+  }
+  .App-logo-l{
+    height: 4vmax;
+  width: 3.5vmax;
   }
   
 }
