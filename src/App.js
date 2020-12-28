@@ -44,7 +44,7 @@ function App() {
           <img className="App-logo-l" src={logo} />
         </Link>
         <input id="searchBar" placeholder="Buscar" className="searchBar" onChange = {e => setSearch(e.target.value)}></input>
-        <button id="inputB" className="search-buttom"><i class="fa fa-search"></i></button>
+        <button id="inputB" className="search-buttom" onClick={search}><i class="fa fa-search"></i></button>
 
         <div className="item icon" onClick={dropMenu}><i class="fa fa-bars"></i></div>
 
