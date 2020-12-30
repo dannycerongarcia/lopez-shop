@@ -12,8 +12,13 @@ const Shoes = ({ dispatch, page_number }) => {
   const getUrl = () => {
     let paremeter = new URLSearchParams(window.location.search);
     let currentPage = parseInt(paremeter.get("page"), 10);
-    dispatch(setPage(currentPage));
-    console.log(page_number);
+    if(currentPage >= 0){
+      dispatch(setPage(currentPage));
+      if (page_number > 0) {
+        let prev = document.getElementById("pre-bot");
+        prev.className = "show-div";
+      }
+    }
   }
   react.useEffect(() => getUrl(), [])
 
