@@ -14,10 +14,10 @@ const Shoes = ({ dispatch, page_number }) => {
     let currentPage = parseInt(paremeter.get("page"), 10);
     if(currentPage >= 0){
       dispatch(setPage(currentPage));
-      if (page_number > 0) {
-        let prev = document.getElementById("pre-bot");
-        prev.className = "show-div";
-      }
+    }
+    if (currentPage > 0) {
+      let prev = document.getElementById("pre-bot");
+      prev.className = "show-div";
     }
   }
   react.useEffect(() => getUrl(), [])
