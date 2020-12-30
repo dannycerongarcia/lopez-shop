@@ -3,3 +3,16 @@
     top: 0;
     left: 0;
 }
+.container{
+    margin:auto;
+    text-align:center;
+    padding-right: 100px;
+    padding-left: 100px;
+    
+}
+@media screen and (max-width:600px){
+    .container{
+        padding-right: 1px;
+        padding-left: 1px;
+    }
+}

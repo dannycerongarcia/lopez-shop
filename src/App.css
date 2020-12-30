@@ -88,6 +88,7 @@
   padding-bottom:1px;
   float:left;
   color: white;
+  
 }
 
 .topnav .active:hover{
@@ -104,10 +105,12 @@
   .topnav .item:not(:first-child){display: none;
     background-color:white;
     color:#282c34;
+    
   }
   .topnav .item:hover{
   background-color: #333;
   color: white;
+  
   }
   .topnav .item.active:hover{
   background-color: #333;
@@ -126,7 +129,7 @@
     padding-right: 5px;
   }
   .searchBar{
-    width: 70%;
+    width: 65%;
   }
   .App-logo-l{
     height: 4vmax;
@@ -136,11 +139,13 @@
 }
 
 @media screen and (max-width: 600px){
-  .topnav.responsive { position: absolute; width: 100%; top:0;}
+  .topnav.responsive { position: fixed; width: 100%; padding-bottom: 1px; top:0;z-index:1000;}
+
   .topnav.topnav.responsive .icon{
     position: absolute;
     right: 0;
     top: 0;
+   
   }
   .topnav.responsive .item{
     float: none;

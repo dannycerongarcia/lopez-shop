@@ -9,9 +9,21 @@
     height: 100%;
 }
 .card-shell{
-    max-width: 290px;
+    display: inline-block;
+    max-width: 390px;
     max-height: 520px;
     height: 520px;
+    padding-bottom: 10px;
+    
+}
+@media screen and (max-width:800px){
+    .card-shell{
+        max-width: 180px;
+        max-height: 420px;
+    }
+    .description{
+        font-size: 13px;
+    }
     
 }
 .price{
@@ -20,6 +32,7 @@
 }
 
 .description{
+    text-align: left;
     max-width: 290px;
     max-height: 278px;
     height: 278px;

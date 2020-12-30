@@ -2,29 +2,34 @@
 import logo from './logo191-white.png';
 import './App.css';
 
-import react,{useState,useEffect} from 'react';
+import react, { useState, useEffect } from 'react';
 // importing router from reactrouter.com for loading componenets
-import {Switch,Route,Link,Redirect} from 'react-router-dom';
+import { Switch, Route, Link, Redirect } from 'react-router-dom';
 // importing redux
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 // components
 import Home from './web-components/Home.js';
 import Shoes from './web-components/Shoes.js';
+// redux
+import { setPage } from "./redux/actions/pageNumber";
 
 
-function App() {
+const App = ({ dispatch, page_number }) => {
+
   // search input
-  let [mySearch,setSearch] = useState('');
+  let [mySearch, setSearch] = useState('');
+  // need to create 
+
   // drop down menu
-  const dropMenu = () =>{
+  const dropMenu = () => {
     var x = document.getElementById("myTopNav");
     var y = document.getElementById("searchBar");
     var z = document.getElementById("inputB");
-    if(x.className === "topnav" && y.className === "searchBar"){
+    if (x.className === "topnav" && y.className === "searchBar") {
       x.className += " responsive";
       y.className += " responsive";
       z.className += " responsive";
-    }else{
+    } else {
       x.className = "topnav";
       y.className = "searchBar";
       z.className += "search-buttom";
@@ -32,36 +37,41 @@ function App() {
   }
 
   // search bar
-  const search = () =>{
+  const search = () => {
     console.log(mySearch);
   }
+
+  var shoes_link = `/shoes?page=${page_number}`.replace(/\s/g, '');
 
   return (
     <div className="">
       <div className="topnav" id="myTopNav">
-      <header className="">
-        <Link to="/" className="item active">
-          <img className="App-logo-l" src={logo} />
-        </Link>
-        <input id="searchBar" placeholder="Buscar" className="searchBar" onChange = {e => setSearch(e.target.value)}></input>
-        <button id="inputB" className="search-buttom" onClick={search}><i class="fa fa-search"></i></button>
+        <header className="">
+          <Link to="/" className="item active">
+            <img className="App-logo-l" src={logo} />
+          </Link>
+          <input id="searchBar" placeholder="Buscar" className="searchBar" onChange={e => setSearch(e.target.value)}></input>
+          <button id="inputB" className="search-buttom" onClick={search}><i class="fa fa-search"></i></button>
 
-        <div className="item icon" onClick={dropMenu}><i class="fa fa-bars"></i></div>
+          <div className="item icon" onClick={dropMenu}><i class="fa fa-bars"></i></div>
 
-        <br/>
+          <br />
 
-        <Link to="/" className="item" onClick={dropMenu}><div >Home</div></Link>
-        <Link to="/shoes"className="item" onClick={dropMenu}><div >Shoes</div></Link>
-        
-      </header>
+          <Link to="/" className="item" onClick={dropMenu}><div >Home</div></Link>
+
+          <Link to={shoes_link} className="item" onClick={dropMenu}><div >Shoes</div></Link>
+
+        </header>
       </div>
-      
+
       <switch>
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/Shoes" component={Shoes}></Route>
-        </switch>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/shoes" component={Shoes}></Route>
+      </switch>
     </div>
   );
 }
-
-export default App;
+const mapStateToProps = state => ({
+  page_number: state.pageReducer.page_number,
+});
+export default connect(mapStateToProps)(App);
