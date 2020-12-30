@@ -16,3 +16,10 @@
         padding-left: 1px;
     }
 }
+
+.hidden-div{
+    display: none;
+}
+.show-div{
+    display: block;
+}

@@ -59,14 +59,18 @@ const App = ({ dispatch, page_number }) => {
 
           <Link to="/" className="item" onClick={dropMenu}><div >Home</div></Link>
 
-          <Link to={shoes_link} className="item" onClick={dropMenu}><div >Shoes</div></Link>
+          <Link to="/shoes" className="item" onClick={dropMenu}><div >Shoes</div></Link>
 
         </header>
       </div>
 
       <switch>
-        <Route path="/" exact component={Home}></Route>
-        <Route path="/shoes" component={Shoes}></Route>
+        <Route path="/" exact >
+          <Home/>
+        </Route>
+        <Route path={`/shoes`}>
+          <Shoes/>
+        </Route>
       </switch>
     </div>
   );

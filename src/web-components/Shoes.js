@@ -2,40 +2,61 @@ import { connect } from 'react-redux';
 import '../CSS/home.css';
 import { setPage } from "../redux/actions/pageNumber";
 import { Switch, Route, Link, Redirect } from 'react-router-dom';
-import react, { useState, useEffect } from 'react';
+import react, { useState } from 'react';
 
 
 
 const Shoes = ({ dispatch, page_number }) => {
+  let [redirect, setRidirect] = useState(false);
   // geturl
-  var shoes_link = `/shoes?page=${page_number}`.replace(/\s/g, '');
-
   const getUrl = () => {
     let paremeter = new URLSearchParams(window.location.search);
-    let currentPage = paremeter.get("page");
-    console.log("current page_ "+currentPage);
+    let currentPage = parseInt(paremeter.get("page"), 10);
+    dispatch(setPage(currentPage));
+    console.log(page_number);
   }
   react.useEffect(() => getUrl(), [])
 
   const next = () => {
     dispatch(setPage(page_number + 1));
+    // setRidirect(true);
     let link = `/shoes?page=${page_number}`.replace(/\s/g, '');
-    return(<Redirect push to={link}/>);
+    // this.props.history.push(link);
+    let prev = document.getElementById("pre-bot");
+    prev.className = "show-div";
+    return link;
   }
   const previews = () => {
     if (page_number - 1 >= 0) {
       dispatch(setPage(page_number - 1));
       let link = `/shoes?page=${page_number}`.replace(/\s/g, '');
-      return(<Redirect push to={link}/>);
+      // this.props.history.push(link);
+      if (page_number === 1) {
+        let prev = document.getElementById("pre-bot");
+        prev.className = "hidden-div";
+      }
     }
+
+
+
+    return 0;
+  }
+
+  if (redirect) {
+    let link = `/shoes?page=${page_number}`.replace(/\s/g, '');
+    return <Redirect to={{
+      pathname: "/shoes",
+      search: `?page=${page_number}`,
+      setPage: { referrece: getUrl() }
+    }}></Redirect>;
   }
 
 
   return (
-    <div className="">
+    <div >
       <h1 className="test">Shoes page {page_number}</h1>
-      <button onClick={previews} >Previews</button>
-      <button onClick={next}>Next</button>
+      <Link id="pre-bot" to={`/shoes?page=${page_number - 1}`} className="hidden-div"><button onClick={previews}>Previews</button></Link>
+      <Link to={`/shoes?page=${page_number + 1}`}><button onClick={next} >Next</button></Link>
 
     </div>
   );
