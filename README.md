@@ -1,5 +1,13 @@
-#Database Design
+# Database Design
+
 ![items table](itemstable.png "items table")
+# Installations required 
+
+__run__ `npm install` __to automatically install all dependencies__
+
+__Manually install dependencies__
+1. react-router:`npm install react-router-dom`
+2. reduc/react-redux: `npm install --save redux` then `npm install react-redux`
 
 # Getting Started with Create React App
 
