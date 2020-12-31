@@ -41,20 +41,17 @@ const Shoes = ({ dispatch, page_number }) => {
         prev.className = "hidden-div";
       }
     }
-
-
-
     return 0;
   }
 
-  if (redirect) {
-    let link = `/shoes?page=${page_number}`.replace(/\s/g, '');
-    return <Redirect to={{
-      pathname: "/shoes",
-      search: `?page=${page_number}`,
-      setPage: { referrece: getUrl() }
-    }}></Redirect>;
-  }
+  // if (redirect) {
+  //   let link = `/shoes?page=${page_number}`.replace(/\s/g, '');
+  //   return <Redirect to={{
+  //     pathname: "/shoes",
+  //     search: `?page=${page_number}`,
+  //     setPage: { referrece: getUrl() }
+  //   }}></Redirect>;
+  // }
 
 
   return (

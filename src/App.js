@@ -41,7 +41,6 @@ const App = ({ dispatch, page_number }) => {
     console.log(mySearch);
   }
 
-  var shoes_link = `/shoes?page=${page_number}`.replace(/\s/g, '');
 
   return (
     <div className="">
@@ -59,7 +58,7 @@ const App = ({ dispatch, page_number }) => {
 
           <Link to="/" className="item" onClick={dropMenu}><div >Home</div></Link>
 
-          <Link to="/shoes" className="item" onClick={dropMenu}><div >Shoes</div></Link>
+          <Link to={`/shoes?page=0`} className="item" onClick={function(event){dropMenu(); dispatch(setPage(0));} }><div >Shoes</div></Link>
 
         </header>
       </div>
