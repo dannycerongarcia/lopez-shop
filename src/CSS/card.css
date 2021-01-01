@@ -3,16 +3,19 @@
     padding-right: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 212px;
-    margin: auto;
+    width: 212px;
+    
+    /* margin: auto; */
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
 }
 .card-shell{
+    height: 520px;
+    
     display: inline-block;
     max-width: 390px;
     max-height: 520px;
-    height: 520px;
+    
     padding-bottom: 10px;
     
 }
@@ -34,8 +37,8 @@
 .description{
     text-align: left;
     max-width: 290px;
-    max-height: 278px;
-    height: 278px;
+    max-height: 228px;
+    height: 228px;
     overflow: hidden;
 }
 .card-button{
@@ -56,6 +59,12 @@
 }
 
 .image-box{
-    max-width: 212px;
-    max-height: 212px;
+    width: 112px;
+    height: 122px;
+}
+.image-size{
+    max-width: 112px;
+    max-height: 122px;
+    width: 112px;
+    height: 122px;
 }
