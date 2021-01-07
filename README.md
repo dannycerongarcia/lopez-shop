@@ -6,10 +6,10 @@ __Full responsive with all devices__
 ![items table](itemstable.png "items table")
 
 # Installations required 
-![desktop|512x397,20%](./mdimages/desktop.png "Desktop size") <!-- height="20px" width="20px" -->
-![ipad|512x397,20%](./mdimages/ipad.png "ipad size")
-![iphone-se|512x397,20%](./mdimages/iphone_SE.png "iphone SE")
-![iphone-X|512x397,20%](./mdimages/iphoneX.png "iphone X")
+![desktop|20%](./mdimages/desktop.png "Desktop size") <!-- height="20px" width="20px" -->
+![ipad|20%](./mdimages/ipad.png "ipad size")
+![iphone-se|20%](./mdimages/iphone_SE.png "iphone SE")
+![iphone-X|20%](./mdimages/iphoneX.png "iphone X")
 
 __you can run__ `npm install` __to automatically install all dependencies__
  __or__
