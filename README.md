@@ -6,7 +6,7 @@ __Full responsive with all devices__
 ![items table](itemstable.png "items table")
 
 # Installations required 
-![desktop](./mdimages/desktop.png "Desktop size")
+![desktop](./mdimages/desktop.png =250x "Desktop size")
 ![ipad](./mdimages/ipad.png "ipad size")
 ![iphone se](./mdimages/iphone_SE.png "iphone SE")
 ![iphone X](./mdimages/iphoneX.png "iphone X")
