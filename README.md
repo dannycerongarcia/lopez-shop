@@ -1,7 +1,15 @@
+__Full responsive with all devices__
+
+
 # Database Design
 
 ![items table](itemstable.png "items table")
+
 # Installations required 
+![desktop](./mdimages/desktop.png "Desktop size")
+![ipad](./mdimages/ipad.png "ipad size")
+![iphone se](./mdimages/iphone_SE.png "iphone SE")
+![iphone X](./mdimages/iphoneX.png "iphone X")
 
 __you can run__ `npm install` __to automatically install all dependencies__
  __or__

@@ -14,22 +14,27 @@ function Home() {
         list => {
           // console.log(list);
           const arrlist = list.data.slice(0, 8).map((allData) =>
-          <div className="card-shell">
-          <div class="card">
-            <div className="image-box">
-            <img className="image-size" src={allData.picturelink} alt="Denim Jeans" />
+            <div className="card-shell">
+              <div class="card">
+                <div className="image-box">
+
+                  <img className="image-size" src={allData.picturelink} 
+                  alt="Denim Jeans" loading="lazy" />
+
+                </div>
+                <div className="item-name">
+                  <a href={allData.picturelink}>{allData.itemname}</a>
+                </div>
+                <p class="price">{allData.price}</p>
+                <p className="description">empty</p>
+                <p><button className="card-button">Ver articulo</button></p>
+              </div>
             </div>
-            <a href={allData.picturelink}>Tailored Jeans</a>
-            <p class="price">{allData.price}</p>
-            <p className="description">empty</p>
-            <p><button className="card-button">Ver articulo</button></p>
-          </div>
-        </div>
           );
-          setItemsList(arrlist);  
+          setItemsList(arrlist);
         }
       );
-      
+
   }
   react.useEffect(() => homeAPI(), [])
   return (
