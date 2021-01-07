@@ -6,14 +6,14 @@ __Full responsive with all devices__
 ![items table](itemstable.png "items table")
 
 # Installations required 
-![desktop](./mdimages/desktop.png "Desktop size") <!-- height="20px" width="20px" -->
-![ipad](./mdimages/ipad.png "ipad size")
-![iphone se](./mdimages/iphone_SE.png "iphone SE")
-![iphone X](./mdimages/iphoneX.png "iphone X")
+![desktop|512x397,20%](./mdimages/desktop.png "Desktop size") <!-- height="20px" width="20px" -->
+![ipad|512x397,20%](./mdimages/ipad.png "ipad size")
+![iphone-se|512x397,20%](./mdimages/iphone_SE.png "iphone SE")
+![iphone-X|512x397,20%](./mdimages/iphoneX.png "iphone X")
 
 __you can run__ `npm install` __to automatically install all dependencies__
  __or__
-__Manually install dependencies__
+__Manually install  dependencies__
 1. react-router:`npm install react-router-dom`
 2. reduc/react-redux: `npm install --save redux` then `npm install react-redux`
 
