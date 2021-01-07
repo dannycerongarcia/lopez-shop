@@ -1,5 +1,5 @@
 __Full responsive with all devices__
-![desktop](./mdimages/desktop.png "Desktop size") <!-- height="20px" width="20px" -->
+![desktop](./mdimages/desktop.png "Desktop size")
 ![ipad](./mdimages/ipad.png "ipad size")
 ![iphone-se](./mdimages/iphone_SE.png "iphone SE")
 ![iphone-X](./mdimages/iphoneX.png "iphone X")
