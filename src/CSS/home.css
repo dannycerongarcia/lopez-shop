@@ -11,16 +11,38 @@
     padding-top: 4px;
     
 }
+.container2{
+    margin:auto;
+    text-align:center;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-top: 4px;
+    
+}
 @media screen and (max-width:600px){
     .container{
+        padding-right: 1px;
+        padding-left: 1px;
+    }
+    .container2{
         padding-right: 1px;
         padding-left: 1px;
     }
 }
 
 .hidden-div{
-    display: none;
+    pointer-events: none;
+    opacity: 50%;
 }
 .show-div{
     display: block;
+}
+
+.fload-left{
+    float: left;
+}
+.centered{
+    display: flex;
+  justify-content: center;
+  text-align: center;
 }

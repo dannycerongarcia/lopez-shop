@@ -15,7 +15,8 @@ __you can run__ `npm install` __to automatically install all dependencies__
  __or__
 __Manually install  dependencies__
 1. react-router:`npm install react-router-dom`
-2. reduc/react-redux: `npm install --save redux` then `npm install react-redux`
+2. redux/react-redux: `npm install --save redux` then `npm install react-redux`
+3. redux/redux-thunk: npm install redux-thunk
 
 
 # Getting Started with Create React App

@@ -63,14 +63,14 @@ const App = ({ dispatch, page_number }) => {
         </header>
       </div>
 
-      <switch>
+      <Switch>
         <Route path="/" exact >
           <Home/>
         </Route>
         <Route path={`/shoes`}>
           <Shoes/>
         </Route>
-      </switch>
+      </Switch>
     </div>
   );
 }
